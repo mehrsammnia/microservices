@@ -1,9 +1,0 @@
-applySpecVersion: 1
-spec:
-  configSync:
-    enabled: true
-    sourceFormat: unstructured
-    syncRepo: https://github.com/mehrsammnia/microservices
-    syncBranch: main
-    secretType: none
-    policyDir: .
