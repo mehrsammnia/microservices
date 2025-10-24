@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: users
-        image: us-central1-docker.pkg.dev/PROJECT_ID/microservices-repo/users-service:v1
+        image: us-central1-docker.pkg.dev/bubbly-pillar-469002-v4/microservices-repo/users-service:v1
         ports:
         - containerPort: 8080
 ---
