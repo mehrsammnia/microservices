@@ -1,0 +1,7 @@
+# products-namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: products
+  labels:
+    istio-injection: enabled
