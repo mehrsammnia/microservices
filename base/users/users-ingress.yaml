@@ -1,19 +1,12 @@
-# users-ingress.yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
-  name: users-ingress
+  name: users-service
   namespace: users
-  annotations:
-    kubernetes.io/ingress.class: "gce"
 spec:
-  rules:
-  - http:
-      paths:
-      - path: /users
-        pathType: Prefix
-        backend:
-          service:
-            name: users-service
-            port:
-              number: 80
+  type: LoadBalancer
+  selector:
+    app: users
+  ports:
+  - port: 80
+    targetPort: 8080
